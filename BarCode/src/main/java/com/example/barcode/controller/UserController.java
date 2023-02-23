@@ -1,9 +1,11 @@
 package com.example.barcode.controller;
 
+import com.example.barcode.domain.request.UserRequest;
 import com.example.barcode.domain.dto.UserDto;
+import com.example.barcode.repository.UserRepository;
 import com.example.barcode.service.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,8 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 public class UserController {
-    @Autowired
-    private UserService userService;
+    private final UserService userService;
 
     @PostMapping("/users/new-user")
     public ResponseEntity<String> join(@RequestBody UserDto userDto) {
@@ -22,13 +23,13 @@ public class UserController {
     }
 
 
-//    @PostMapping("/login")
-//    public UserDTO login(@RequestBody UserDTO user) {
-//        System.out.println("Login attmpted :: " + user);
-//
-//        UserDTO userDTO = this.userService.findUserByUsername(user.getUsername());
-//        return userDTO;
-//    }
-
+    @PostMapping("/users/login")
+    public ResponseEntity login(@RequestBody UserRequest request) {
+        if (userService.login(request.getId(),
+                request.getPassword()).equals("Success")) {
+            return new ResponseEntity(HttpStatus.OK );
+        }
+        return new ResponseEntity(HttpStatus.BAD_REQUEST);
+    }
 
 }

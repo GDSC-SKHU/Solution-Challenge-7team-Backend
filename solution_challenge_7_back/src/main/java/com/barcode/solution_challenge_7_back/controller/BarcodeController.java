@@ -24,13 +24,13 @@ public class BarcodeController {
 
     @GetMapping("/recycle/{material}")
     public ResponseEntity<String> getRecyclingInfo(@PathVariable String material){
-        String recyclingInfo; // 분리수거 방법
+        String recyclingInfo = null; // 분리수거 방법
         if (material.equals("vinyl")) { // 비닐
-            recyclingInfo = "how : 가정에서 배출된 재활용 폐기물은 지자체나 사업자가 운영하는 선별센터로 수집되어 폐기물의 상태나 재질에 따라 선별됩니다.\n" +
-                    "이때 깨끗한 것들은 재활용이 되고, 오염된 플라스틱, 비닐과 같은 불에 타는 쓰레기, 가연성 폐기물은 압축되어 수도권매립지로 운송됩니다.\n" +
-                    "반입된 폐기물은 크레인을 이용해 자동투입장치로 이동하며 파봉파쇄기를 통해 파쇄가 이루어집니다.\n" +
-                    "파쇄가 완료된 비닐은 컨베이어를 통해 입자의 크기, 무게, 재질에 따른 분리, 선별 등의 과정을 거칩니다.\n" +
-                    "선별된 비닐을 재질에 따라 용융압출, 용융성형, 압출성형, 열분해 및 냉각 등의 공정을 거쳐 재생원료, 재생제품, 재생 유류, 고형원료 등 을 생산합니다.";
+            recyclingInfo = "- 가정에서 배출된 재활용 폐기물은 지자체나 사업자가 운영하는 선별센터로 수집되어 폐기물의 상태나 재질에 따라 선별됩니다.\n" +
+                    "- 이때 깨끗한 것들은 재활용이 되고, 오염된 플라스틱, 비닐과 같은 불에 타는 쓰레기, 가연성 폐기물은 압축되어 수도권매립지로 운송됩니다.\n" +
+                    "- 반입된 폐기물은 크레인을 이용해 자동투입장치로 이동하며 파봉파쇄기를 통해 파쇄가 이루어집니다.\n" +
+                    "- 파쇄가 완료된 비닐은 컨베이어를 통해 입자의 크기, 무게, 재질에 따른 분리, 선별 등의 과정을 거칩니다.\n" +
+                    "- 선별된 비닐을 재질에 따라 용융압출, 용융성형, 압출성형, 열분해 및 냉각 등의 공정을 거쳐 재생원료, 재생제품, 재생 유류, 고형원료 등 을 생산합니다.";
         }
         else if(material.equals("styrofoam")){ // 스티로폼
             recyclingInfo = "how : 회수된 스티로품을 분쇄합니다.\n" +
@@ -82,9 +82,6 @@ public class BarcodeController {
                     "이렇게 생산된 초지를 화장지 가공업체에서 무늬나 엠보싱 처리후 판매용 화장지로 포장합니다.";
         }
 
-        else {
-            recyclingInfo = "해당하는 분리수거 방법이 없습니다.";
-        }
         return ResponseEntity.ok(recyclingInfo);
     }
 

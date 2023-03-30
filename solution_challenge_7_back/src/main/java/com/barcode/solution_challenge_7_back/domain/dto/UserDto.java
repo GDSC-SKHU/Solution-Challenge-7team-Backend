@@ -1,10 +1,12 @@
 package com.barcode.solution_challenge_7_back.domain.dto;
 
 import com.barcode.solution_challenge_7_back.domain.User;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class UserDto {
     private String id; // 유저 아이디

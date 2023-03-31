@@ -15,7 +15,8 @@ If you click on each picture button, information about the recycling process wil
 
 ### Github Link
 BackEnd : https://github.com/GDSC-SKHU/Solution-Challenge-7team-Backend 
-Mobile : https://github.com/GDSC-SKHU/FLOG-FrontEnd
+<br>
+Mobile : https://github.com/GDSC-SKHU/Solution-Challenge-7team-Mobile
 
 ### Skill
 1) Backend

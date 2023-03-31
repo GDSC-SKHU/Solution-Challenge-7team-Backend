@@ -26,7 +26,8 @@ If you click on each picture button, information about the recycling process wil
 BackEnd : https://github.com/GDSC-SKHU/Solution-Challenge-7team-Backend 
 <br>
 Mobile : https://github.com/GDSC-SKHU/Solution-Challenge-7team-Mobile
-=> "If you want to scan a barcode, please go to the link and scan the product!"
+<br>
+If you want to scan a barcode, please go to the link and scan the product!
 
 - - -
 

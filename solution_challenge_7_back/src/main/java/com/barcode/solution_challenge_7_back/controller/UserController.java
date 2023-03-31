@@ -61,6 +61,5 @@ public class UserController {
                     .body("User not found with id " + userId);
         }
 
-
     }
 }

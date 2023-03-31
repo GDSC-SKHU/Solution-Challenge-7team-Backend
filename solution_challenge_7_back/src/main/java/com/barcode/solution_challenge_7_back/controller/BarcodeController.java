@@ -82,7 +82,11 @@ public class BarcodeController {
                     "이렇게 생산된 초지를 화장지 가공업체에서 무늬나 엠보싱 처리후 판매용 화장지로 포장합니다.";
         }
 
-        return ResponseEntity.ok(recyclingInfo);
+        if (recyclingInfo != null) {
+            return ResponseEntity.ok(recyclingInfo);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
 }

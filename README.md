@@ -13,15 +13,21 @@ Once you have completed the registration process, you are ready to use the app! 
 
 If you click on each picture button, information about the recycling process will be displayed. Then, scan the barcode of the item that you want to learn how to recycle. Please note that only certain barcodes can be scanned due to limited data. The screen will show the name of the product, how to recycle it, and how to sort it for recycling. In summary, the app uses barcode scanning to facilitate the recycling process, and users can sign up for an account to access the app's features. The app provides information on how to recycle specific items, including their sorting and recycling methods.
 
+- - -
+
 ### Member
 #### BackEnd : gahyeon kim, JiYoung Heo
 
 #### Mobile : jinhee Park, seohee Wang
 
+- - -
+
 ### Github Link
 BackEnd : https://github.com/GDSC-SKHU/Solution-Challenge-7team-Backend 
 <br>
 Mobile : https://github.com/GDSC-SKHU/Solution-Challenge-7team-Mobile
+
+- - -
 
 ### Skill
 1) Backend

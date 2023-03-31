@@ -39,4 +39,3 @@ Mobile : https://github.com/GDSC-SKHU/Solution-Challenge-7team-Mobile
 
 2) Mobile
 - SwiftUI
--

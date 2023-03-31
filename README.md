@@ -15,7 +15,11 @@ If you click on each picture button, information about the recycling process wil
 
 ### Member
 #### BackEnd : gahyeon kim, JiYoung Heo
+
 <br>
+
+
+
 #### Mobile : jinhee Park, seohee Wang
 
 ### Github Link

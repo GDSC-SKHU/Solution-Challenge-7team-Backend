@@ -17,7 +17,7 @@ public class BarcodeController {
     @GetMapping("barcode/{barcodeNumber}")
     public BarcodeDto getBarcodeInfo(@PathVariable String barcodeNumber) {
         if(barcodeNumber == null){
-            throw new BarcodeNotFoundException();
+            throw new BarcodeNotFoundException("바코드 번호를 찾을 수 없습니다.");
         }
         return barcodeService.getProductInfoByBarcode(barcodeNumber);
     }

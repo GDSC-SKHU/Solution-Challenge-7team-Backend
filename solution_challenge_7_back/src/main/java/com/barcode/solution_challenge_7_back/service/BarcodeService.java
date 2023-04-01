@@ -15,10 +15,8 @@ public class BarcodeService {
     private final BarcodeRepository barcodeRepository;
 
     public BarcodeDto getProductInfoByBarcode(String barcodeNumber){
-        BarCode barCode = barcodeRepository.findByBarcodeNumber(barcodeNumber);
-        if (barCode == null) {
-            throw new BarcodeNotFoundException();
-        }
+        BarCode barCode = barcodeRepository.findByBarcodeNumber(barcodeNumber)
+                .orElseThrow(() -> new BarcodeNotFoundException(barcodeNumber));
         return new BarcodeDto(barCode.getGoods_name(), barCode.getHow(), barCode.getMethod());
     }
 

@@ -1,13 +1,15 @@
 package com.barcode.solution_challenge_7_back.controller;
 
+import com.barcode.solution_challenge_7_back.domain.BarCode;
 import com.barcode.solution_challenge_7_back.domain.dto.BarcodeDto;
 import com.barcode.solution_challenge_7_back.exception.BarcodeNotFoundException;
 import com.barcode.solution_challenge_7_back.service.BarcodeService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
@@ -21,6 +23,7 @@ public class BarcodeController {
         }
         return barcodeService.getProductInfoByBarcode(barcodeNumber);
     }
+
 
     @GetMapping("/recycle/{material}")
     public ResponseEntity<String> getRecyclingInfo(@PathVariable String material){
